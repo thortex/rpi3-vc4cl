@@ -12,7 +12,8 @@
 ### VC4CL
 
 ```
-./TBD
+./021_install_vc4c_runtime.sh
+./022_install_vc4c.sh
 ```
 
 ## How to Build
@@ -36,5 +37,6 @@
 ### VC4CL
 
 ```
-./TBD
+./030_build_vc4cl.sh
 ```
+
