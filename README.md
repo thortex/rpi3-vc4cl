@@ -1,6 +1,18 @@
 # VC4CL for Raspberry Pi 3.
 
+Prebuilt debian packages of VC4CL for Raspberry Pi 3.
+The author is doe300, https://github.com/doe300/VC4CL.
+
 ## How to Install
+
+### Common
+
+```
+cd
+git clone https://github.com/thortex/rpi3-vc4cl.git
+cd rpi3-vc4cl
+./000_clone_repos.sh
+```
 
 ### VC4C
 
@@ -40,3 +52,29 @@
 ./030_build_vc4cl.sh
 ```
 
+## How to Test
+
+### OpenCV
+
+First of all, install OpenCV with OpenCL support. Prebuilt debian package of OpenCV which enabled OpenCL is located in https://github.com/thortex/rpi3-opencv/ 
+
+```
+cd test/opencv
+./setup.sh
+make
+sudo su
+(LD_LIBRARY_PATH=gtest ./opencl-opencv-test)
+```
+
+If you run all test cases, it takes several hours for 16,182 tests of OpenCL tests.
+
+You can choice test case category by specifing TEST_XX variable on make command:
+```
+make TEST_ORIGINAL=no \
+     TEST_CORE=no \
+     TEST_IMGPROC=no \
+     TEST_STITCHING=no \
+     TEST_PHOTO=no \
+     TEST_VIDEO=no \
+     TEST_FEATURE2D=no
+```
