@@ -6,7 +6,7 @@ TEST_STITCHING=yes
 TEST_PHOTO=yes
 TEST_VIDEO=yes
 TEST_FEATURE2D=yes
-RPI3=no
+RPI3=yes
 
 all: $(TARGET)
 
@@ -14,19 +14,18 @@ VPATH=./modules/imgproc/test/ocl \
 	./modules/ts/src \
 	./modules/core/test/ocl \
 	./modules/stitching/test/ocl \
-	./modules/core/test/ocl \
 	./modules/photo/test/ocl \
 	./modules/video/test/ocl \
 	./modules/features2d/test/ocl
 
-CXX=g++
+CXX=g++-6
 
 CXXFLAGS=-g \
 	-D__OPENCV_BUILD \
-	-std=gnu++11 \
+	-std=gnu++14 \
 	-O0 \
 	-I/usr/include/eigen3 \
-	-I/usr/local/include/opencv2  \
+	-I/usr/local/include/opencv4  \
 	-I. \
 	-I./modules \
 	-I./modules/ts/include \

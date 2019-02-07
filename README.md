@@ -52,6 +52,12 @@ cd rpi3-vc4cl
 ./030_build_vc4cl.sh
 ```
 
+### clinfo
+
+```
+040_install_clinfo.sh
+```
+
 ## How to Test
 
 ### OpenCV

@@ -1,6 +1,6 @@
 #!/bin/bash -x
 
-OPENCV_VER=3.4.2
+OPENCV_VER=4.0.1
 
 sudo apt-get install googletest libgtest-dev
 
