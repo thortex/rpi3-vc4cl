@@ -24,8 +24,8 @@ cd rpi3-vc4cl
 ### VC4CL
 
 ```
-./021_install_vc4c_runtime.sh
-./022_install_vc4c.sh
+./031_install_vc4c_runtime.sh
+./032_install_vc4cl.sh
 ```
 
 ## How to Build
