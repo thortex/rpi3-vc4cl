@@ -54,11 +54,9 @@ LDFLAGS=-lopencv_core \
 	-lopencv_photo \
 	-lopencv_features2d \
 	-lOpenCL \
-	-lgtest \
 	-lpthread \
 	-lstdc++ \
-	-lm \
-	-Lgtest
+	-lm
 
 # modules/ts/src
 OBJS=ocl_test.o \
@@ -117,8 +115,7 @@ endif
 
 ifeq ($(TEST_VIDEO), yes)
 # modules/video/test/ocl
-OBJS+=test_optflow_tvl1flow.o \
-	test_optflow_farneback.o \
+OBJS+=test_optflow_farneback.o \
 	test_bgfg_mog2.o \
 	test_optflowpyrlk.o
 endif
@@ -129,7 +126,7 @@ OBJS+=test_feature2d.o \
 	test_brute_force_matcher.o
 endif
 
-$(TARGET): $(OBJS)
+$(TARGET): $(OBJS) gtest/libgtest.a
 
 clean:
 	rm -f $(TARGET) $(OBJS) *~

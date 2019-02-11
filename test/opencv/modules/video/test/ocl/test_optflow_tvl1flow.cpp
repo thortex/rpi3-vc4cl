@@ -44,6 +44,9 @@
 #include "../test_precomp.hpp"
 #include "opencv2/ts/ocl_test.hpp"
 
+#include "opencv2/optflow.hpp"
+#include "opencv2/superres/optical_flow.hpp"
+
 #ifdef HAVE_OPENCL
 
 namespace opencv_test {

@@ -68,8 +68,7 @@ First of all, install OpenCV with OpenCL support. Prebuilt debian package of Ope
 cd test/opencv
 ./setup.sh
 make
-sudo su
-(LD_LIBRARY_PATH=gtest ./opencl-opencv-test)
+sudo sh -c '(LD_LIBRARY_PATH=gtest:/usr/local/lib ./opencl-opencv-test)'
 ```
 
 If you run all test cases, it takes several hours for 16,182 tests of OpenCL tests.
