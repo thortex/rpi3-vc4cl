@@ -24,7 +24,7 @@ cd rpi3-vc4cl
 ### VC4CL
 
 ```
-./031_install_vc4c_runtime.sh
+./031_install_vc4cl_runtime.sh
 ./032_install_vc4cl.sh
 ```
 
